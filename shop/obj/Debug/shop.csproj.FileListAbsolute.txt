@@ -1,0 +1,13 @@
+c:\users\vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\shop.exe
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.Admin.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Авторизация.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.QueryForm.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Properties.Resources.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Registration.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.csproj.GenerateResource.Cache
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\bin\Debug\shop.exe.config
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.csprojResolveAssemblyReference.cache
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\bin\Debug\MySql.Data.dll
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.exe
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.pdb
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\bin\Debug\shop.pdb
