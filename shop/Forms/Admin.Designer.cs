@@ -204,6 +204,7 @@
             this.Uodate.TabIndex = 18;
             this.Uodate.Text = "Изменить";
             this.Uodate.UseVisualStyleBackColor = true;
+            this.Uodate.Click += new System.EventHandler(this.Uodate_Click);
             // 
             // AddButton
             // 

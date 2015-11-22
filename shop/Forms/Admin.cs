@@ -165,22 +165,23 @@ namespace shop.Forms
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            switch(mode){
+            switch (mode)
+            {
                 case Mode.stationeryMode:
                     {
                         _stationeryTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value));
                         _stationeryTableAdapter.Fill(shopdbDataSet._stationery);
                         break;
                     }
-                    case Mode.salesMode:
+                case Mode.salesMode:
                     {
-                        account_salesTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value));
+                        account_salesTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value),Convert.ToString(dataView.SelectedRows[0].Cells[3].Value));
                         account_salesTableAdapter.Fill(shopdbDataSet.account_sales);
                         break;
-                    }       
+                    }
                 case Mode.autorizationMode:
                     {
-                        autorizationTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value));
+                        autorizationTableAdapter.DeleteQuery(Convert.ToString(dataView.SelectedRows[0].Cells[0].Value));
                         autorizationTableAdapter.Fill(shopdbDataSet.autorization);
                         break;
                     }
@@ -198,7 +199,7 @@ namespace shop.Forms
                     }
                 case Mode.wholeSaleOrdersMode:
                     {
-                        wholesale_ordersTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value));
+                        wholesale_ordersTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value), Convert.ToInt32(dataView.SelectedRows[0].Cells[1].Value));
                         wholesale_ordersTableAdapter.Fill(shopdbDataSet.wholesale_orders);
                         break;
                     }
@@ -208,8 +209,66 @@ namespace shop.Forms
                         wholesale_buyersTableAdapter.Fill(shopdbDataSet.wholesale_buyers);
                         break;
                     }
-                    default: break;
+                default: break;
+            }
         }
 
+        private void Uodate_Click(object sender, EventArgs e)
+        {
+            int value = Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value);
+            switch (mode)
+            {
+                case Mode.autorizationMode:
+                    {
+                        shop.shopdbDataSet.autorizationDataTable autorization = new shopdbDataSet.autorizationDataTable();
+                     //   autorizationTableAdapter.FillBy(autorization, value);
+                        object[] row = autorization.Rows[0].ItemArray;
+                     //   autorizationEditForm an = new autorizationEditForm(Convert.ToInt32(row[0]), Convert.ToInt32(row[1]),
+                       //                                 row[2].ToString(), Convert.ToInt32(row[3]), row[3].ToString());
+                      //  an.ShowDialog();
+                        autorizationTableAdapter.Fill(shopdbDataSet.autorization);
+                        break;
+                    }
+                case Mode.departmentMode:
+                    {
+                        shop.shopdbDataSet.departmentDataTable dt = new shop.shopdbDataSet.departmentDataTable();
+                        //departmentTableAdapter.FillBy(dt, value);
+                        object[] row = dt.Rows[0].ItemArray;
+                       // departmentEditForm dep = new departmentEditForm(Convert.ToInt32(row[0]), row[1].ToString(),
+                                                                                  //         Convert.ToDouble(row[2]));
+                       // dep.ShowDialog();
+                        departmentTableAdapter.Fill(shopdbDataSet.department);
+                        break;
+                    }
+                case Mode.providerMode:
+                    {
+
+                        shop.shopdbDataSet.providerDataTable pr = new shop.shopdbDataSet.providerDataTable();
+                        //providerTableAdapter.FillBy(pr, value);
+                        object[] row = pr.Rows[0].ItemArray;
+                       // providerEditForm sef = new providerEditForm(Convert.ToInt32(row[0]), row[1].ToString(),
+                                             //  row[3].ToString(), Convert.ToDateTime(row[7]),
+                                            //   Convert.ToInt32(row[6]), Convert.ToInt32(row[4]),
+                                              // Convert.ToInt32(row[2]), row[5].ToString());
+                       // sef.ShowDialog();
+                        providerTableAdapter.Fill(shopdbDataSet.provider);
+                        break;
+                    }
+                case Mode.stationeryMode:
+                    {
+                        shop.shopdbDataSet._stationeryDataTable sy = new shop.shopdbDataSet._stationeryDataTable();
+                        _stationeryTableAdapter.FillBy(sy, value);
+                        object[] row = sy.Rows[0].ItemArray;
+                        stationeryEditForm sty = new stationeryEditForm(Convert.ToInt32(row[0]), row[5].ToString(),
+                                                                         row[6].ToString(), row[7].ToString(), row[8].ToString(),
+                                                                         Convert.ToInt32(row[1]), Convert.ToInt32(row[2]),
+                                                                         Convert.ToInt32(row[4]), Convert.ToInt32(row[3]));
+                        sty.ShowDialog();
+                        _stationeryTableAdapter.Fill(shopdbDataSet._stationery);
+                        break;
+                    }
+                default: break;
+            }
+        }
     }
 }
