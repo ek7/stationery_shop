@@ -40,8 +40,8 @@ namespace shop.Forms
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 if (isEdit)
                 {
                     editDepartment();
@@ -52,12 +52,12 @@ namespace shop.Forms
                     addDepartment();
                     MessageBox.Show("Запись добавлена");
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString());
-            //    return;
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
 
             this.Close();
         }

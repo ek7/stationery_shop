@@ -12,6 +12,10 @@ namespace shop {
 }
 
 namespace shop.shopdbDataSetTableAdapters {
+    partial class providerTableAdapter
+    {
+    }
+
     partial class wholesale_buyersTableAdapter
     {
     }

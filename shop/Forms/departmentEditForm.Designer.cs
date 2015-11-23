@@ -37,7 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentTableAdapter = new shop.shopdbDataSetTableAdapters.departmentTableAdapter();
+            this.shopdbDataSet = new shop.shopdbDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopdbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // Description
@@ -95,10 +97,16 @@
             // departmentBindingSource
             // 
             this.departmentBindingSource.DataMember = "department";
+            this.departmentBindingSource.DataSource = this.shopdbDataSet;
             // 
             // departmentTableAdapter
             // 
             this.departmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // shopdbDataSet
+            // 
+            this.shopdbDataSet.DataSetName = "shopdbDataSet";
+            this.shopdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // departmentEditForm
             // 
@@ -114,6 +122,7 @@
             this.Name = "departmentEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopdbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +138,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource departmentBindingSource;
         private shopdbDataSetTableAdapters.departmentTableAdapter departmentTableAdapter;
+        private shopdbDataSet shopdbDataSet;
     }
 }

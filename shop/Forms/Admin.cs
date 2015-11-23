@@ -244,13 +244,11 @@ namespace shop.Forms
                     {
 
                         shop.shopdbDataSet.providerDataTable pr = new shop.shopdbDataSet.providerDataTable();
-                        //providerTableAdapter.FillBy(pr, value);
+                        providerTableAdapter.FillBy(pr, value);
                         object[] row = pr.Rows[0].ItemArray;
-                       // providerEditForm sef = new providerEditForm(Convert.ToInt32(row[0]), row[1].ToString(),
-                                             //  row[3].ToString(), Convert.ToDateTime(row[7]),
-                                            //   Convert.ToInt32(row[6]), Convert.ToInt32(row[4]),
-                                              // Convert.ToInt32(row[2]), row[5].ToString());
-                       // sef.ShowDialog();
+                        providerEditForm sef = new providerEditForm(Convert.ToInt32(row[0]), row[1].ToString(),
+                            row[2].ToString(), row[3].ToString());
+                        sef.ShowDialog();
                         providerTableAdapter.Fill(shopdbDataSet.provider);
                         break;
                     }
