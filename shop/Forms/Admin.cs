@@ -269,12 +269,23 @@ namespace shop.Forms
                     }
                 case Mode.salesMode:
                     {
+                        string date = dataView.SelectedRows[0].Cells[3].Value.ToString();
                         shop.shopdbDataSet.account_salesDataTable acs = new shopdbDataSet.account_salesDataTable();
-                        account_salesTableAdapter.FillBy(acs, value);
+                        account_salesTableAdapter.FillBy(acs,value);
                         object[] row = acs.Rows[0].ItemArray;
                         salesEditForm se = new salesEditForm(Convert.ToInt32(row[0]),row[1].ToString(),row[2].ToString(),row[3].ToString());
                         se.ShowDialog();
                         account_salesTableAdapter.Fill(shopdbDataSet.account_sales);
+                        break;
+                    }
+                case Mode.wholesaleBuyersMode:
+                    {
+                        shop.shopdbDataSet.wholesale_buyersDataTable bt = new shopdbDataSet.wholesale_buyersDataTable();
+                        wholesale_buyersTableAdapter.FillBy(bt, value);
+                        object[] row = bt.Rows[0].ItemArray;
+                        wholesaleBuyersEditForm btf = new wholesaleBuyersEditForm(Convert.ToInt32(row[0]), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                        btf.ShowDialog();
+                        wholesale_buyersTableAdapter.Fill(shopdbDataSet.wholesale_buyers);
                         break;
                     }
                 default: break;

@@ -39,14 +39,14 @@
             this.firm = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.id_product = new System.Windows.Forms.ComboBox();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.shopdbDataSet = new shop.shopdbDataSet();
             this.stationeryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shopdbDataSet = new shop.shopdbDataSet();
+            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._stationeryTableAdapter = new shop.shopdbDataSetTableAdapters._stationeryTableAdapter();
             this.Date = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationeryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // account_salesTableAdapter
@@ -134,19 +134,19 @@
             this.id_product.TabIndex = 70;
             this.id_product.ValueMember = "id_product";
             // 
-            // salesBindingSource
+            // stationeryBindingSource
             // 
-            this.salesBindingSource.DataMember = "account_sales";
+            this.stationeryBindingSource.DataMember = " stationery";
+            this.stationeryBindingSource.DataSource = this.shopdbDataSet;
             // 
             // shopdbDataSet
             // 
             this.shopdbDataSet.DataSetName = "shopdbDataSet";
             this.shopdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // stationeryBindingSource
+            // salesBindingSource
             // 
-            this.stationeryBindingSource.DataMember = " stationery";
-            this.stationeryBindingSource.DataSource = this.shopdbDataSet;
+            this.salesBindingSource.DataMember = "account_sales";
             // 
             // _stationeryTableAdapter
             // 
@@ -177,9 +177,9 @@
             this.Name = "salesEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.salesEditForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shopdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationeryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shopdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
