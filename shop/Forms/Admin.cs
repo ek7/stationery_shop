@@ -220,12 +220,13 @@ namespace shop.Forms
             {
                 case Mode.autorizationMode:
                     {
-                        shop.shopdbDataSet.autorizationDataTable autorization = new shopdbDataSet.autorizationDataTable();
-                     //   autorizationTableAdapter.FillBy(autorization, value);
-                        object[] row = autorization.Rows[0].ItemArray;
-                     //   autorizationEditForm an = new autorizationEditForm(Convert.ToInt32(row[0]), Convert.ToInt32(row[1]),
-                       //                                 row[2].ToString(), Convert.ToInt32(row[3]), row[3].ToString());
-                      //  an.ShowDialog();
+                        string val = Convert.ToString(dataView.SelectedRows[0].Cells[0].Value);
+                        shop.shopdbDataSet.autorizationDataTable auto = new shopdbDataSet.autorizationDataTable();
+                        autorizationTableAdapter.FillBy(auto, value);
+                        object[] row = auto.Rows[0].ItemArray;
+                        autorizationEditForm an = new autorizationEditForm(row[1].ToString(),row[2].ToString(),row[3].ToString(),
+                            row[4].ToString(),row[5].ToString());
+                        an.ShowDialog();
                         autorizationTableAdapter.Fill(shopdbDataSet.autorization);
                         break;
                     }

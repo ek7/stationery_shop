@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace shop.Forms
@@ -48,7 +43,7 @@ namespace shop.Forms
         }
 
 
-        private void editStudent()
+        private void editStationery()
         {
             _stationeryTableAdapter.UpdateQuery(Convert.ToInt32(inShop.Text),
                 Convert.ToInt32(inStock.Text),Convert.ToInt32(idProvider.SelectedValue),
@@ -56,7 +51,7 @@ namespace shop.Forms
                 Manufacturer.Text,Articul.Text,pid);
         }
 
-        private void addStudent()
+        private void addStationery()
         {
             _stationeryTableAdapter.InsertQuery(Convert.ToInt32(inShop.Text),
                 Convert.ToInt32(inStock.Text),Convert.ToInt32(idProvider.SelectedValue),
@@ -70,12 +65,12 @@ namespace shop.Forms
             {
                 if (isEdit)
                 {
-                    editStudent();
+                    editStationery();
                     MessageBox.Show("Запись обновлена");
                 }
                 else
                 {
-                    addStudent();
+                    addStationery();
                     MessageBox.Show("Запись добавлена");
                 }
             }
