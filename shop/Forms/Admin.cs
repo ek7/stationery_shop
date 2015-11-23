@@ -273,7 +273,8 @@ namespace shop.Forms
                         shop.shopdbDataSet.account_salesDataTable acs = new shopdbDataSet.account_salesDataTable();
                         account_salesTableAdapter.FillBy(acs,value);
                         object[] row = acs.Rows[0].ItemArray;
-                        salesEditForm se = new salesEditForm(Convert.ToInt32(row[0]),row[1].ToString(),row[2].ToString(),row[3].ToString());
+                        salesEditForm se = new salesEditForm(Convert.ToInt32(row[0]),row[1].ToString(),row[2].ToString(),
+                            row[3].ToString());
                         se.ShowDialog();
                         account_salesTableAdapter.Fill(shopdbDataSet.account_sales);
                         break;
@@ -283,9 +284,22 @@ namespace shop.Forms
                         shop.shopdbDataSet.wholesale_buyersDataTable bt = new shopdbDataSet.wholesale_buyersDataTable();
                         wholesale_buyersTableAdapter.FillBy(bt, value);
                         object[] row = bt.Rows[0].ItemArray;
-                        wholesaleBuyersEditForm btf = new wholesaleBuyersEditForm(Convert.ToInt32(row[0]), row[1].ToString(), row[2].ToString(), row[3].ToString());
+                        wholesaleBuyersEditForm btf = new wholesaleBuyersEditForm(Convert.ToInt32(row[0]), row[1].ToString(),
+                            row[2].ToString(), row[3].ToString());
                         btf.ShowDialog();
                         wholesale_buyersTableAdapter.Fill(shopdbDataSet.wholesale_buyers);
+                        break;
+                    }
+                case Mode.wholeSaleOrdersMode:
+                    {
+                        int buyer_id = Convert.ToInt32(dataView.SelectedRows[0].Cells[1].Value);
+                        shop.shopdbDataSet.wholesale_ordersDataTable bo = new shopdbDataSet.wholesale_ordersDataTable();
+                        wholesale_ordersTableAdapter.FillBy(bo, value,buyer_id);
+                        object[] row = bo.Rows[0].ItemArray;
+                        wholesaleOrdersEditForm bof = new wholesaleOrdersEditForm(Convert.ToInt32(row[0]), Convert.ToInt32(row[1]),
+                            row[2].ToString(),row[3].ToString());
+                        bof.ShowDialog();
+                        wholesale_ordersTableAdapter.Fill(shopdbDataSet.wholesale_orders);
                         break;
                     }
                 default: break;
