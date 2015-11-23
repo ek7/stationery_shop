@@ -31,18 +31,18 @@ namespace shop
             {
                 int countIn = 0;
                 con.Open();
-                MySqlCommand checkComm = new MySqlCommand("SELECT Номер_паспорта,Логин FROM autorization", con);
-                MySqlCommand insertComm = new MySqlCommand("INSERT INTO autorization(ФИО,Должность,Номер_паспорта,Логин,Пароль) VALUES ('" + snpStr.Text + "','" + jobStr.Text + "','" + passportNo.Text + "','" + loginStr.Text + "','" + passwdStr.Text + "')", con);
+                MySqlCommand checkComm = new MySqlCommand("SELECT Passport_number,Login FROM autorization", con);
+                MySqlCommand insertComm = new MySqlCommand("INSERT INTO autorization(SNP,Job,Passport_number,Login,Password) VALUES ('" + snpStr.Text + "','" + jobStr.Text + "','" + passportNo.Text + "','" + loginStr.Text + "','" + passwdStr.Text + "')", con);
                 MySqlDataReader reader = checkComm.ExecuteReader();
                 while (reader.Read()) 
                 {
-                    if (reader["Логин"].ToString() == loginStr.Text) 
+                    if (reader["Login"].ToString() == loginStr.Text) 
                     {
                         MessageBox.Show("Такой логин уже зарегистрирован. Пожалуйста, придумайте новый логин.");
                         countIn++;
                         break;
                     }
-                    if (reader["Номер_паспорта"].ToString() == passportNo.Text) 
+                    if (reader["Passport_number"].ToString() == passportNo.Text) 
                     {
                         MessageBox.Show("Такой пользователь уже зарегистрирован.");
                         countIn++;

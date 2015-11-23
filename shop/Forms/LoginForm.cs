@@ -51,6 +51,8 @@ namespace shop
                             break;
                         case "Бухгалтер":
                             MessageBox.Show("Вы вошли как бухгалтер");
+                            Form accountantform = new AccountantForm();
+                            accountantform.Show();
                             count++;
                             break;
                         case "Admin":
