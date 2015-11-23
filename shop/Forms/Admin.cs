@@ -233,11 +233,10 @@ namespace shop.Forms
                 case Mode.departmentMode:
                     {
                         shop.shopdbDataSet.departmentDataTable dt = new shop.shopdbDataSet.departmentDataTable();
-                        //departmentTableAdapter.FillBy(dt, value);
+                        departmentTableAdapter.FillBy(dt, value);
                         object[] row = dt.Rows[0].ItemArray;
-                       // departmentEditForm dep = new departmentEditForm(Convert.ToInt32(row[0]), row[1].ToString(),
-                                                                                  //         Convert.ToDouble(row[2]));
-                       // dep.ShowDialog();
+                        departmentEditForm dep = new departmentEditForm(Convert.ToInt32(row[0]), row[1].ToString(),row[2].ToString());
+                        dep.ShowDialog();
                         departmentTableAdapter.Fill(shopdbDataSet.department);
                         break;
                     }
