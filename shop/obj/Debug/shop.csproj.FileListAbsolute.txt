@@ -15,3 +15,4 @@ C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\obj\Debug\shop.For
 C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.autorizationEditForm.resources
 C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.departmentEditForm.resources
 C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.providerEditForm.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.salesEditForm.resources

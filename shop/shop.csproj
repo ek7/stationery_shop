@@ -141,7 +141,7 @@
       <DependentUpon>shopdbDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="shopdbDataSet1.Designer.cs">
+    <Compile Include="shopdbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>shopdbDataSet.xsd</DependentUpon>
@@ -163,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\QueryForm.resx">
       <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\salesEditForm.resx">
+      <DependentUpon>salesEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\stationeryEditForm.resx">
       <DependentUpon>stationeryEditForm.cs</DependentUpon>
@@ -194,7 +197,7 @@
     <None Include="shopdbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>shopdbDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>shopdbDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="shopdbDataSet.xss">
       <DependentUpon>shopdbDataSet.xsd</DependentUpon>

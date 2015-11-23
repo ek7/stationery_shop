@@ -175,7 +175,8 @@ namespace shop.Forms
                     }
                 case Mode.salesMode:
                     {
-                        account_salesTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value),Convert.ToString(dataView.SelectedRows[0].Cells[3].Value));
+                        account_salesTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value),
+                            Convert.ToString(dataView.SelectedRows[0].Cells[3].Value));
                         account_salesTableAdapter.Fill(shopdbDataSet.account_sales);
                         break;
                     }
@@ -199,7 +200,8 @@ namespace shop.Forms
                     }
                 case Mode.wholeSaleOrdersMode:
                     {
-                        wholesale_ordersTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value), Convert.ToInt32(dataView.SelectedRows[0].Cells[1].Value));
+                        wholesale_ordersTableAdapter.DeleteQuery(Convert.ToInt32(dataView.SelectedRows[0].Cells[0].Value), 
+                            Convert.ToInt32(dataView.SelectedRows[0].Cells[1].Value));
                         wholesale_ordersTableAdapter.Fill(shopdbDataSet.wholesale_orders);
                         break;
                     }
@@ -263,6 +265,16 @@ namespace shop.Forms
                                                                          Convert.ToInt32(row[4]), Convert.ToInt32(row[3]));
                         sty.ShowDialog();
                         _stationeryTableAdapter.Fill(shopdbDataSet._stationery);
+                        break;
+                    }
+                case Mode.salesMode:
+                    {
+                        shop.shopdbDataSet.account_salesDataTable acs = new shopdbDataSet.account_salesDataTable();
+                        account_salesTableAdapter.FillBy(acs, value);
+                        object[] row = acs.Rows[0].ItemArray;
+                        salesEditForm se = new salesEditForm(Convert.ToInt32(row[0]),row[1].ToString(),row[2].ToString(),row[3].ToString());
+                        se.ShowDialog();
+                        account_salesTableAdapter.Fill(shopdbDataSet.account_sales);
                         break;
                     }
                 default: break;
