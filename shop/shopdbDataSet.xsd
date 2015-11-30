@@ -638,7 +638,7 @@ WHERE        (id_product = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO `wholesale_buyers` ( `SNP/Firm`, `Phone`, `e-mail`) VALUES (@snp, @phone, @email)</CommandText>
@@ -650,7 +650,7 @@ WHERE        (id_product = @id)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE `wholesale_buyers` SET  `SNP/Firm` = @snp, `Phone` = @phone, `e-mail` = @email WHERE id_buyer = @id</CommandText>
@@ -742,7 +742,7 @@ WHERE        (id_product = @id)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO `wholesale_orders` (`id_product`, `id_buyer`, `number_of`, `date`) VALUES (@id_product, @id_buyer, @number_of, @date)</CommandText>
@@ -755,7 +755,7 @@ WHERE        (id_product = @id)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="shopdbConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE `wholesale_orders` SET `id_product` = @product_id, `id_buyer` = @buyer_id, `number_of` = @number_of, `date` = @date WHERE ((`id_product` = @id_product) AND (`id_buyer` = @id_buyer))</CommandText>
@@ -780,7 +780,7 @@ WHERE        (id_product = @id)</CommandText>
   <xs:element name="shopdbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="shopdbDataSet" msprop:Generator_UserDSName="shopdbDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="_x0020_stationery" msprop:Generator_TableClassName="_stationeryDataTable" msprop:Generator_TableVarName="table_stationery" msprop:Generator_TablePropName="_stationery" msprop:Generator_RowDeletingName="_stationeryRowDeleting" msprop:Generator_RowChangingName="_stationeryRowChanging" msprop:Generator_RowEvHandlerName="_stationeryRowChangeEventHandler" msprop:Generator_RowDeletedName="_stationeryRowDeleted" msprop:Generator_UserTableName=" stationery" msprop:Generator_RowChangedName="_stationeryRowChanged" msprop:Generator_RowEvArgName="_stationeryRowChangeEvent" msprop:Generator_RowClassName="_stationeryRow">
+        <xs:element name="_x0020_stationery" msprop:Generator_TableClassName="_stationeryDataTable" msprop:Generator_TableVarName="table_stationery" msprop:Generator_RowChangedName="_stationeryRowChanged" msprop:Generator_TablePropName="_stationery" msprop:Generator_RowDeletingName="_stationeryRowDeleting" msprop:Generator_RowChangingName="_stationeryRowChanging" msprop:Generator_RowEvHandlerName="_stationeryRowChangeEventHandler" msprop:Generator_RowDeletedName="_stationeryRowDeleted" msprop:Generator_RowClassName="_stationeryRow" msprop:Generator_UserTableName=" stationery" msprop:Generator_RowEvArgName="_stationeryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_product" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_product" msprop:Generator_ColumnPropNameInRow="id_product" msprop:Generator_ColumnPropNameInTable="id_productColumn" msprop:Generator_UserColumnName="id_product" type="xs:int" />
@@ -795,13 +795,7 @@ WHERE        (id_product = @id)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="45" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:int" />
               <xs:element name="manufacturer" msprop:Generator_ColumnVarNameInTable="columnmanufacturer" msprop:Generator_ColumnPropNameInRow="manufacturer" msprop:Generator_ColumnPropNameInTable="manufacturerColumn" msprop:Generator_UserColumnName="manufacturer">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -819,7 +813,7 @@ WHERE        (id_product = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="account_sales" msprop:Generator_TableClassName="account_salesDataTable" msprop:Generator_TableVarName="tableaccount_sales" msprop:Generator_TablePropName="account_sales" msprop:Generator_RowDeletingName="account_salesRowDeleting" msprop:Generator_RowChangingName="account_salesRowChanging" msprop:Generator_RowEvHandlerName="account_salesRowChangeEventHandler" msprop:Generator_RowDeletedName="account_salesRowDeleted" msprop:Generator_UserTableName="account_sales" msprop:Generator_RowChangedName="account_salesRowChanged" msprop:Generator_RowEvArgName="account_salesRowChangeEvent" msprop:Generator_RowClassName="account_salesRow">
+        <xs:element name="account_sales" msprop:Generator_TableClassName="account_salesDataTable" msprop:Generator_TableVarName="tableaccount_sales" msprop:Generator_RowChangedName="account_salesRowChanged" msprop:Generator_TablePropName="account_sales" msprop:Generator_RowDeletingName="account_salesRowDeleting" msprop:Generator_RowChangingName="account_salesRowChanging" msprop:Generator_RowEvHandlerName="account_salesRowChangeEventHandler" msprop:Generator_RowDeletedName="account_salesRowDeleted" msprop:Generator_RowClassName="account_salesRow" msprop:Generator_UserTableName="account_sales" msprop:Generator_RowEvArgName="account_salesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_product" msprop:Generator_ColumnVarNameInTable="columnid_product" msprop:Generator_ColumnPropNameInRow="id_product" msprop:Generator_ColumnPropNameInTable="id_productColumn" msprop:Generator_UserColumnName="id_product" type="xs:int" />
@@ -847,7 +841,7 @@ WHERE        (id_product = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="autorization" msprop:Generator_TableClassName="autorizationDataTable" msprop:Generator_TableVarName="tableautorization" msprop:Generator_TablePropName="autorization" msprop:Generator_RowDeletingName="autorizationRowDeleting" msprop:Generator_RowChangingName="autorizationRowChanging" msprop:Generator_RowEvHandlerName="autorizationRowChangeEventHandler" msprop:Generator_RowDeletedName="autorizationRowDeleted" msprop:Generator_UserTableName="autorization" msprop:Generator_RowChangedName="autorizationRowChanged" msprop:Generator_RowEvArgName="autorizationRowChangeEvent" msprop:Generator_RowClassName="autorizationRow">
+        <xs:element name="autorization" msprop:Generator_TableClassName="autorizationDataTable" msprop:Generator_TableVarName="tableautorization" msprop:Generator_RowChangedName="autorizationRowChanged" msprop:Generator_TablePropName="autorization" msprop:Generator_RowDeletingName="autorizationRowDeleting" msprop:Generator_RowChangingName="autorizationRowChanging" msprop:Generator_RowEvHandlerName="autorizationRowChangeEventHandler" msprop:Generator_RowDeletedName="autorizationRowDeleted" msprop:Generator_RowClassName="autorizationRow" msprop:Generator_UserTableName="autorization" msprop:Generator_RowEvArgName="autorizationRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -889,7 +883,7 @@ WHERE        (id_product = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="department" msprop:Generator_TableClassName="departmentDataTable" msprop:Generator_TableVarName="tabledepartment" msprop:Generator_TablePropName="department" msprop:Generator_RowDeletingName="departmentRowDeleting" msprop:Generator_RowChangingName="departmentRowChanging" msprop:Generator_RowEvHandlerName="departmentRowChangeEventHandler" msprop:Generator_RowDeletedName="departmentRowDeleted" msprop:Generator_UserTableName="department" msprop:Generator_RowChangedName="departmentRowChanged" msprop:Generator_RowEvArgName="departmentRowChangeEvent" msprop:Generator_RowClassName="departmentRow">
+        <xs:element name="department" msprop:Generator_TableClassName="departmentDataTable" msprop:Generator_TableVarName="tabledepartment" msprop:Generator_RowChangedName="departmentRowChanged" msprop:Generator_TablePropName="department" msprop:Generator_RowDeletingName="departmentRowDeleting" msprop:Generator_RowChangingName="departmentRowChanging" msprop:Generator_RowEvHandlerName="departmentRowChangeEventHandler" msprop:Generator_RowDeletedName="departmentRowDeleted" msprop:Generator_RowClassName="departmentRow" msprop:Generator_UserTableName="department" msprop:Generator_RowEvArgName="departmentRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_department" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid_department" msprop:Generator_ColumnPropNameInRow="id_department" msprop:Generator_ColumnPropNameInTable="id_departmentColumn" msprop:Generator_UserColumnName="id_department" type="xs:int" />
@@ -910,7 +904,7 @@ WHERE        (id_product = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="provider" msprop:Generator_TableClassName="providerDataTable" msprop:Generator_TableVarName="tableprovider" msprop:Generator_TablePropName="provider" msprop:Generator_RowDeletingName="providerRowDeleting" msprop:Generator_RowChangingName="providerRowChanging" msprop:Generator_RowEvHandlerName="providerRowChangeEventHandler" msprop:Generator_RowDeletedName="providerRowDeleted" msprop:Generator_UserTableName="provider" msprop:Generator_RowChangedName="providerRowChanged" msprop:Generator_RowEvArgName="providerRowChangeEvent" msprop:Generator_RowClassName="providerRow">
+        <xs:element name="provider" msprop:Generator_TableClassName="providerDataTable" msprop:Generator_TableVarName="tableprovider" msprop:Generator_RowChangedName="providerRowChanged" msprop:Generator_TablePropName="provider" msprop:Generator_RowDeletingName="providerRowDeleting" msprop:Generator_RowChangingName="providerRowChanging" msprop:Generator_RowEvHandlerName="providerRowChangeEventHandler" msprop:Generator_RowDeletedName="providerRowDeleted" msprop:Generator_RowClassName="providerRow" msprop:Generator_UserTableName="provider" msprop:Generator_RowEvArgName="providerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_provider" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid_provider" msprop:Generator_ColumnPropNameInRow="id_provider" msprop:Generator_ColumnPropNameInTable="id_providerColumn" msprop:Generator_UserColumnName="id_provider" type="xs:int" />
@@ -938,7 +932,7 @@ WHERE        (id_product = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="wholesale_buyers" msprop:Generator_TableClassName="wholesale_buyersDataTable" msprop:Generator_TableVarName="tablewholesale_buyers" msprop:Generator_TablePropName="wholesale_buyers" msprop:Generator_RowDeletingName="wholesale_buyersRowDeleting" msprop:Generator_RowChangingName="wholesale_buyersRowChanging" msprop:Generator_RowEvHandlerName="wholesale_buyersRowChangeEventHandler" msprop:Generator_RowDeletedName="wholesale_buyersRowDeleted" msprop:Generator_UserTableName="wholesale_buyers" msprop:Generator_RowChangedName="wholesale_buyersRowChanged" msprop:Generator_RowEvArgName="wholesale_buyersRowChangeEvent" msprop:Generator_RowClassName="wholesale_buyersRow">
+        <xs:element name="wholesale_buyers" msprop:Generator_TableClassName="wholesale_buyersDataTable" msprop:Generator_TableVarName="tablewholesale_buyers" msprop:Generator_RowChangedName="wholesale_buyersRowChanged" msprop:Generator_TablePropName="wholesale_buyers" msprop:Generator_RowDeletingName="wholesale_buyersRowDeleting" msprop:Generator_RowChangingName="wholesale_buyersRowChanging" msprop:Generator_RowEvHandlerName="wholesale_buyersRowChangeEventHandler" msprop:Generator_RowDeletedName="wholesale_buyersRowDeleted" msprop:Generator_RowClassName="wholesale_buyersRow" msprop:Generator_UserTableName="wholesale_buyers" msprop:Generator_RowEvArgName="wholesale_buyersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_buyer" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid_buyer" msprop:Generator_ColumnPropNameInRow="id_buyer" msprop:Generator_ColumnPropNameInTable="id_buyerColumn" msprop:Generator_UserColumnName="id_buyer" type="xs:int" />
@@ -966,7 +960,7 @@ WHERE        (id_product = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="wholesale_orders" msprop:Generator_TableClassName="wholesale_ordersDataTable" msprop:Generator_TableVarName="tablewholesale_orders" msprop:Generator_TablePropName="wholesale_orders" msprop:Generator_RowDeletingName="wholesale_ordersRowDeleting" msprop:Generator_RowChangingName="wholesale_ordersRowChanging" msprop:Generator_RowEvHandlerName="wholesale_ordersRowChangeEventHandler" msprop:Generator_RowDeletedName="wholesale_ordersRowDeleted" msprop:Generator_UserTableName="wholesale_orders" msprop:Generator_RowChangedName="wholesale_ordersRowChanged" msprop:Generator_RowEvArgName="wholesale_ordersRowChangeEvent" msprop:Generator_RowClassName="wholesale_ordersRow">
+        <xs:element name="wholesale_orders" msprop:Generator_TableClassName="wholesale_ordersDataTable" msprop:Generator_TableVarName="tablewholesale_orders" msprop:Generator_RowChangedName="wholesale_ordersRowChanged" msprop:Generator_TablePropName="wholesale_orders" msprop:Generator_RowDeletingName="wholesale_ordersRowDeleting" msprop:Generator_RowChangingName="wholesale_ordersRowChanging" msprop:Generator_RowEvHandlerName="wholesale_ordersRowChangeEventHandler" msprop:Generator_RowDeletedName="wholesale_ordersRowDeleted" msprop:Generator_RowClassName="wholesale_ordersRow" msprop:Generator_UserTableName="wholesale_orders" msprop:Generator_RowEvArgName="wholesale_ordersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_product" msprop:Generator_ColumnVarNameInTable="columnid_product" msprop:Generator_ColumnPropNameInRow="id_product" msprop:Generator_ColumnPropNameInTable="id_productColumn" msprop:Generator_UserColumnName="id_product" type="xs:int" />
@@ -1017,11 +1011,11 @@ WHERE        (id_product = @id)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="_x0020_stationery_account_sales" msdata:parent="_x0020_stationery" msdata:child="account_sales" msdata:parentkey="id_product" msdata:childkey="id_product" msprop:Generator_UserChildTable="account_sales" msprop:Generator_ChildPropName="Getaccount_salesRows" msprop:Generator_UserRelationName=" stationery_account_sales" msprop:Generator_RelationVarName="relation_stationery_account_sales" msprop:Generator_UserParentTable=" stationery" msprop:Generator_ParentPropName="_stationeryRow" />
-      <msdata:Relationship name="_x0020_stationery_wholesale_orders" msdata:parent="_x0020_stationery" msdata:child="wholesale_orders" msdata:parentkey="id_product" msdata:childkey="id_product" msprop:Generator_UserChildTable="wholesale_orders" msprop:Generator_ChildPropName="Getwholesale_ordersRows" msprop:Generator_UserRelationName=" stationery_wholesale_orders" msprop:Generator_RelationVarName="relation_stationery_wholesale_orders" msprop:Generator_UserParentTable=" stationery" msprop:Generator_ParentPropName="_stationeryRow" />
-      <msdata:Relationship name="wholesale_buyers_wholesale_orders" msdata:parent="wholesale_buyers" msdata:child="wholesale_orders" msdata:parentkey="id_buyer" msdata:childkey="id_buyer" msprop:Generator_UserChildTable="wholesale_orders" msprop:Generator_ChildPropName="Getwholesale_ordersRows" msprop:Generator_UserRelationName="wholesale_buyers_wholesale_orders" msprop:Generator_RelationVarName="relationwholesale_buyers_wholesale_orders" msprop:Generator_UserParentTable="wholesale_buyers" msprop:Generator_ParentPropName="wholesale_buyersRow" />
-      <msdata:Relationship name="_x0020_stationery_provider" msdata:parent="_x0020_stationery" msdata:child="provider" msdata:parentkey="id_provider" msdata:childkey="id_provider" msprop:Generator_UserChildTable="provider" msprop:Generator_ChildPropName="GetproviderRows" msprop:Generator_UserRelationName=" stationery_provider" msprop:Generator_RelationVarName="relation_stationery_provider" msprop:Generator_UserParentTable=" stationery" msprop:Generator_ParentPropName="_stationeryRow" />
-      <msdata:Relationship name="_x0020_stationery_department" msdata:parent="_x0020_stationery" msdata:child="department" msdata:parentkey="id_department" msdata:childkey="id_department" msprop:Generator_UserChildTable="department" msprop:Generator_ChildPropName="GetdepartmentRows" msprop:Generator_UserRelationName=" stationery_department" msprop:Generator_RelationVarName="relation_stationery_department" msprop:Generator_UserParentTable=" stationery" msprop:Generator_ParentPropName="_stationeryRow" />
+      <msdata:Relationship name="_x0020_stationery_account_sales" msdata:parent="_x0020_stationery" msdata:child="account_sales" msdata:parentkey="id_product" msdata:childkey="id_product" msprop:Generator_UserChildTable="account_sales" msprop:Generator_ChildPropName="Getaccount_salesRows" msprop:Generator_UserRelationName=" stationery_account_sales" msprop:Generator_ParentPropName="_stationeryRow" msprop:Generator_RelationVarName="relation_stationery_account_sales" msprop:Generator_UserParentTable=" stationery" />
+      <msdata:Relationship name="_x0020_stationery_wholesale_orders" msdata:parent="_x0020_stationery" msdata:child="wholesale_orders" msdata:parentkey="id_product" msdata:childkey="id_product" msprop:Generator_UserChildTable="wholesale_orders" msprop:Generator_ChildPropName="Getwholesale_ordersRows" msprop:Generator_UserRelationName=" stationery_wholesale_orders" msprop:Generator_ParentPropName="_stationeryRow" msprop:Generator_RelationVarName="relation_stationery_wholesale_orders" msprop:Generator_UserParentTable=" stationery" />
+      <msdata:Relationship name="wholesale_buyers_wholesale_orders" msdata:parent="wholesale_buyers" msdata:child="wholesale_orders" msdata:parentkey="id_buyer" msdata:childkey="id_buyer" msprop:Generator_UserChildTable="wholesale_orders" msprop:Generator_ChildPropName="Getwholesale_ordersRows" msprop:Generator_UserRelationName="wholesale_buyers_wholesale_orders" msprop:Generator_ParentPropName="wholesale_buyersRow" msprop:Generator_RelationVarName="relationwholesale_buyers_wholesale_orders" msprop:Generator_UserParentTable="wholesale_buyers" />
+      <msdata:Relationship name="_x0020_stationery_provider" msdata:parent="_x0020_stationery" msdata:child="provider" msdata:parentkey="id_provider" msdata:childkey="id_provider" msprop:Generator_UserChildTable="provider" msprop:Generator_ChildPropName="GetproviderRows" msprop:Generator_UserRelationName=" stationery_provider" msprop:Generator_ParentPropName="_stationeryRow" msprop:Generator_RelationVarName="relation_stationery_provider" msprop:Generator_UserParentTable=" stationery" />
+      <msdata:Relationship name="_x0020_stationery_department" msdata:parent="_x0020_stationery" msdata:child="department" msdata:parentkey="id_department" msdata:childkey="id_department" msprop:Generator_UserChildTable="department" msprop:Generator_ChildPropName="GetdepartmentRows" msprop:Generator_UserRelationName=" stationery_department" msprop:Generator_ParentPropName="_stationeryRow" msprop:Generator_RelationVarName="relation_stationery_department" msprop:Generator_UserParentTable=" stationery" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -47,6 +47,8 @@ namespace shop
                             break;
                         case "Менеджер":
                             MessageBox.Show("Вы вошли как менеджер");
+                            Form manager = new ManagerForm();
+                            manager.Show();
                             count++;
                             break;
                         case "Бухгалтер":

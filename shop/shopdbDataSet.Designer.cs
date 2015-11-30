@@ -684,7 +684,7 @@ namespace shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _stationeryRow Add_stationeryRow(int number_of_in_store, int quantity_in_stock, int id_provider, int id_department, string name, string price, string manufacturer, string article) {
+            public _stationeryRow Add_stationeryRow(int number_of_in_store, int quantity_in_stock, int id_provider, int id_department, string name, int price, string manufacturer, string article) {
                 _stationeryRow row_stationeryRow = ((_stationeryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -751,7 +751,7 @@ namespace shop {
                 base.Columns.Add(this.columnid_department);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columnprice = new global::System.Data.DataColumn("price", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
                 this.columnmanufacturer = new global::System.Data.DataColumn("manufacturer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmanufacturer);
@@ -771,7 +771,6 @@ namespace shop {
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 45;
                 this.columnprice.AllowDBNull = false;
-                this.columnprice.MaxLength = 45;
                 this.columnmanufacturer.AllowDBNull = false;
                 this.columnmanufacturer.MaxLength = 45;
                 this.columnarticle.AllowDBNull = false;
@@ -2855,9 +2854,9 @@ namespace shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string price {
+            public int price {
                 get {
-                    return ((string)(this[this.table_stationery.priceColumn]));
+                    return ((int)(this[this.table_stationery.priceColumn]));
                 }
                 set {
                     this[this.table_stationery.priceColumn] = value;

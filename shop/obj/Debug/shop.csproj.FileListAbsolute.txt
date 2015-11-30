@@ -19,3 +19,14 @@ C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.For
 C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.wholesaleBuyersEditForm.resources
 C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.wholesaleOrdersEditForm.resources
 C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.AccountantForm.resources
+C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\PdfSharp.dll
+C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\PdfSharp.xml
+C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Vova\documents\visual studio 2013\Projects\shop\shop\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.ManagerForm.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.Orders.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.OrderAskForm.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.SearchForm.resources
+C:\Users\Vova\Documents\Visual Studio 2013\Projects\shop\shop\obj\Debug\shop.Forms.filterForm.resources

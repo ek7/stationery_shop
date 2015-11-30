@@ -41,7 +41,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SeledCount = new System.Windows.Forms.TextBox();
             this.PriceCount = new System.Windows.Forms.TextBox();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDialog = new System.Windows.Forms.PrintDialog();
+            this.label = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.printBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +115,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(549, 231);
             this.dataGridView1.TabIndex = 1;
@@ -119,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 283);
+            this.label1.Location = new System.Drawing.Point(13, 325);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 13);
             this.label1.TabIndex = 2;
@@ -128,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 314);
+            this.label2.Location = new System.Drawing.Point(13, 356);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 13);
             this.label2.TabIndex = 3;
@@ -136,27 +140,69 @@
             // 
             // SeledCount
             // 
-            this.SeledCount.Location = new System.Drawing.Point(245, 283);
+            this.SeledCount.Location = new System.Drawing.Point(245, 325);
             this.SeledCount.Name = "SeledCount";
             this.SeledCount.Size = new System.Drawing.Size(316, 20);
             this.SeledCount.TabIndex = 4;
             // 
             // PriceCount
             // 
-            this.PriceCount.Location = new System.Drawing.Point(245, 314);
+            this.PriceCount.Location = new System.Drawing.Point(245, 356);
             this.PriceCount.Name = "PriceCount";
             this.PriceCount.Size = new System.Drawing.Size(316, 20);
             this.PriceCount.TabIndex = 5;
             // 
-            // printDialog1
+            // printDialog
             // 
-            this.printDialog1.UseEXDialog = true;
+            this.printDialog.UseEXDialog = true;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(12, 50);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(0, 13);
+            this.label.TabIndex = 6;
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.Location = new System.Drawing.Point(589, 69);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(149, 69);
+            this.saveBtn.TabIndex = 7;
+            this.saveBtn.Text = "Сохранить отчет";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // printBtn
+            // 
+            this.printBtn.Location = new System.Drawing.Point(589, 144);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(149, 69);
+            this.printBtn.TabIndex = 8;
+            this.printBtn.Text = "Распечатать отчет";
+            this.printBtn.UseVisualStyleBackColor = true;
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(589, 231);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 69);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Отправить отчет";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AccountantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 386);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.printBtn);
+            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.PriceCount);
             this.Controls.Add(this.SeledCount);
             this.Controls.Add(this.label2);
@@ -190,6 +236,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SeledCount;
         private System.Windows.Forms.TextBox PriceCount;
-        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintDialog printDialog;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button printBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
